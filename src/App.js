@@ -10,7 +10,7 @@ import SchedulePage from "./pages/SchedulePage";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/bus_redesign">
       <Header />
 
       <Routes>
