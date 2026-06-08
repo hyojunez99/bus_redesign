@@ -1,70 +1,144 @@
-# Getting Started with Create React App
+# Bus Redesign
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1. 프로젝트 소개
 
-## Available Scripts
+- **설명:**
+  기존 고속버스 예매 서비스(KOBUS)를 참고하여 사용자 중심의 예매 경험을 제공하는 버스 예매 웹 서비스입니다. 출발지/도착지 검색, 날짜 선택, 등급 필터링, 배차 조회, 좌석 선택 기능을 구현했으며 모바일 환경을 고려한 반응형 UI를 적용했습니다.
 
-In the project directory, you can run:
+- **진행 기간:** 2026.06.01 ~ 2026.06.08
 
-### `npm start`
+- **개발 인원:** 1명 (개인 프로젝트)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **배포 링크:** https://hyojunez99.github.io/bus_redesign
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **GitHub:** https://github.com/hyojunez99/bus_redesign
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 2. 사용 기술 스택 (Tech Stack)
 
-### `npm run build`
+- React
+- React Router DOM
+- SCSS
+- JavaScript (ES6+)
+- Figma
+- GitHub Pages
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 3. 기획 및 디자인 (Planning & Design)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **컨셉:**
+  복잡한 고속버스 예매 과정을 직관적으로 개선하고 모바일 환경에서도 쉽게 사용할 수 있는 예약 경험 제공
 
-### `npm run eject`
+- **Tool:** Figma
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **주요 활동:**
+  - 사용자 예매 플로우 설계
+  - 모바일 우선(Mobile First) UI 설계
+  - 터미널 검색 모달 UX 설계
+  - 좌석 선택 인터랙션 설계
+  - 반응형 레이아웃 설계
+  - 디자인 시스템 기반 컴포넌트 설계
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 4. 디렉토리 구조
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```text
+src
+│
+├── assets
+│   ├── data
+│   ├── images
+│   └── scss
+│
+├── components
+│   ├── Button
+│   ├── Card
+│   ├── Chip
+│   ├── Footer
+│   ├── Header
+│   ├── Input
+│   ├── ReservationCheckForm
+│   ├── ReservationForm
+│   ├── SeatModal
+│   └── TerminalModal
+│
+├── pages
+│
+├── sections
+│
+├── App.jsx
+│
+└── index.js
+```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 5. 담당 역할
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 기획 및 디자인
 
-### Code Splitting
+- 서비스 구조 설계
+- 사용자 예매 플로우 설계
+- UI/UX 디자인
+- 반응형 레이아웃 설계
+- 컴포넌트 구조 설계
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 개발
 
-### Analyzing the Bundle Size
+- React 기반 SPA 구축
+- React Router 페이지 이동 구현
+- 터미널 검색 모달 구현
+- 버스 조회 기능 구현
+- 좌석 선택 모달 구현
+- 조건별 데이터 필터링 구현
+- 반응형 UI 구현
+- GitHub Pages 배포
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 6. 주요 기능
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- 출발지 / 도착지 선택
+- 터미널 검색 및 지역 필터 기능
+- 편도 / 왕복 예매 선택
+- 날짜 선택 기능
+- 버스 등급 필터링
+- 배차 조회 기능
+- 좌석 선택 기능
+- 예매 완료 처리
+- 모바일 / 태블릿 / PC 반응형 지원
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 7. 트러블 슈팅
 
-### Deployment
+### 문제 1
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- **문제:** 선택한 터미널명과 버스 데이터의 출발지/도착지 명칭이 달라 조회 결과가 표시되지 않음
 
-### `npm run build` fails to minify
+- **해결:** 터미널 데이터를 버스 데이터와 동일한 명칭으로 통일하고 문자열 비교 로직을 수정하여 정상 조회되도록 개선
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 문제 2
+
+- **문제:** SeatModal 컴포넌트 내부에서 모달을 다시 렌더링하여 화면이 중복 출력되는 현상 발생
+
+- **해결:** SchedulePage에서만 모달을 제어하도록 구조를 변경하여 중복 렌더링 문제 해결
+
+### 문제 3
+
+- **문제:** GitHub Pages 배포 후 새로고침 시 "No routes matched location" 오류 발생
+
+- **해결:** BrowserRouter 대신 HashRouter를 적용하여 정적 호스팅 환경에서도 정상 라우팅되도록 수정
+
+---
+
+## 8. 인사이트 (Insights)
+
+- React 컴포넌트 분리와 상태 관리의 중요성을 경험할 수 있었다.
+- 사용자 입력 데이터와 실제 데이터 구조를 일치시키는 것이 서비스 안정성에 큰 영향을 준다는 점을 확인했다.
+- 모달, 필터링, 라우팅 등 실무에서 자주 사용하는 UI 패턴을 직접 구현하며 React 활용 능력을 향상시킬 수 있었다.
+- 모바일 우선 설계와 반응형 구현 과정을 통해 다양한 디바이스 환경을 고려한 UI 설계 경험을 쌓을 수 있었다.
+- 사용자 관점에서 예매 흐름을 설계하며 UX 중심 사고를 강화할 수 있었다.

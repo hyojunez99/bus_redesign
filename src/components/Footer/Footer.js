@@ -12,9 +12,18 @@ import Logo_9 from "../../assets/images/logo/logo-9.png";
 import Logo_10 from "../../assets/images/logo/logo-10.png";
 import Logo_11 from "../../assets/images/logo/logo-11.png";
 
-const companyLogos = [Logo_1, Logo_2, Logo_3, Logo_4, Logo_5, Logo_6, Logo_7];
+const companyLogos = [
+  Logo_1,
+  Logo_2,
+  Logo_3,
+  Logo_4,
+  Logo_5,
+  Logo_6,
+  Logo_7,
+  Logo_8,
+];
 
-const certLogos = [Logo_8, Logo_9, Logo_10, Logo_11];
+const certLogos = [Logo_9, Logo_10, Logo_11];
 
 const Footer = () => {
   return (

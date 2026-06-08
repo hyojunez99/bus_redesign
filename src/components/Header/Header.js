@@ -18,12 +18,16 @@ const Header = () => {
           <ul className="gnb-list">
             {MenuData.map((menu) => (
               <li key={menu.id} className="gnb-item">
-                <a href="/">{menu.title}</a>
+                <button type="button" className="gnb-link">
+                  {menu.title}
+                </button>
 
                 <ul className="submenu">
                   {menu.subMenus.map((subMenu, index) => (
                     <li key={index}>
-                      <a href="/">{subMenu}</a>
+                      <button type="button" className="submenu-link">
+                        {subMenu}
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -65,7 +69,9 @@ const Header = () => {
             <ul>
               {menu.subMenus.map((subMenu, index) => (
                 <li key={index}>
-                  <a href="/">{subMenu}</a>
+                  <button type="button" className="mobile-menu-link">
+                    {subMenu}
+                  </button>
                 </li>
               ))}
             </ul>
