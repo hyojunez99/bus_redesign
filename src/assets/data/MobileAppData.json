@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "number": "01",
+    "position": "left",
+    "title": "간편 예매",
+    "desc": "즐겨찾는 노선을 빠르게 예매"
+  },
+  {
+    "id": 2,
+    "number": "02",
+    "position": "left",
+    "title": "모바일 티켓",
+    "desc": "종이 티켓 없이 간편하게 탑승"
+  },
+  {
+    "id": 3,
+    "number": "03",
+    "position": "right",
+    "title": "실시간 운행정보",
+    "desc": "운행정보를 실시간으로 확인"
+  },
+  {
+    "id": 4,
+    "number": "04",
+    "position": "right",
+    "title": "다양한 혜택",
+    "desc": "앱 전용 할인과 다양한 이벤트"
+  }
+]

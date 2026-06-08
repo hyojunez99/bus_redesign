@@ -1,0 +1,308 @@
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/font" as *;
+@use "../../assets/scss/mixin" as *;
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid $border;
+}
+
+.header-inner {
+  width: 100%;
+  max-width: 1280px;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 0 24px;
+
+  @include flex(space-between, center);
+}
+
+.logo {
+  flex-shrink: 0;
+
+  color: $primary-blue;
+
+  @extend .text-h3;
+
+  a {
+    display: block;
+  }
+}
+
+.gnb {
+  display: none;
+}
+
+@include respond-to(desktop) {
+  .gnb {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.gnb-list {
+  display: grid;
+  grid-template-columns: repeat(5, 160px);
+
+  justify-content: center;
+}
+
+.gnb-item {
+  position: relative;
+  text-align: center;
+
+  > a {
+    display: block;
+
+    height: 80px;
+    line-height: 80px;
+
+    color: $text-primary;
+
+    @extend .text-body;
+
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    > a {
+      color: $primary-blue;
+    }
+
+    .submenu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}
+
+.submenu {
+  position: absolute;
+
+  top: calc(100% - 8px);
+  left: 50%;
+
+  min-width: 220px;
+
+  padding: 24px;
+
+  background: $surface;
+
+  border: 1px solid $border;
+  border-radius: 20px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  transform: translateX(-50%) translateY(12px);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.3s ease;
+
+  z-index: 1001;
+
+  li:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  a {
+    color: $text-secondary;
+
+    @extend .text-body;
+
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-blue;
+    }
+  }
+}
+
+.header-util {
+  flex-shrink: 0;
+
+  @include flex(center, center, row, 16);
+}
+
+.login-btn,
+.signup-btn,
+.lang-btn {
+  background: transparent;
+
+  cursor: pointer;
+
+  color: $text-primary;
+
+  @extend .text-caption;
+
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $primary-blue;
+  }
+}
+
+.menu-btn {
+  display: flex;
+
+  width: 40px;
+  height: 40px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  @include flex(center, center, column, 5);
+
+  span {
+    width: 20px;
+    height: 2px;
+
+    background: $text-primary;
+
+    border-radius: 999px;
+
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+}
+
+@include respond-to(desktop) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+
+  top: 80px;
+  left: 0;
+
+  width: 100%;
+  height: calc(100vh - 80px);
+
+  background: $surface;
+
+  overflow-y: auto;
+
+  padding: 24px;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(100%);
+
+  transition: all 0.35s ease;
+
+  z-index: 999;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu-section {
+  padding: 20px 0;
+
+  border-bottom: 1px solid $border;
+
+  h3 {
+    margin-bottom: 16px;
+
+    color: $text-primary;
+
+    @extend .text-body-lg;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  a {
+    color: $text-secondary;
+
+    @extend .text-body;
+
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $primary-blue;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .login-btn,
+  .signup-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  #header {
+    height: 72px;
+  }
+
+  .header-inner {
+    padding: 0 16px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  .lang-btn {
+    display: none;
+  }
+
+  .header-util {
+    gap: 8px;
+  }
+
+  .menu-btn {
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-menu {
+    top: 72px;
+    height: calc(100vh - 72px);
+
+    padding: 20px;
+  }
+}

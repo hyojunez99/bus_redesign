@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "departure": "서울",
+    "arrival": "부산",
+    "time": "약 4시간",
+    "price": "38,000원~"
+  },
+  {
+    "id": 2,
+    "departure": "서울",
+    "arrival": "강릉",
+    "time": "약 2시간 40분",
+    "price": "18,000원~"
+  },
+  {
+    "id": 3,
+    "departure": "서울",
+    "arrival": "대전",
+    "time": "약 1시간 40분",
+    "price": "11,000원~"
+  },
+  {
+    "id": 4,
+    "departure": "서울",
+    "arrival": "광주",
+    "time": "약 3시간 30분",
+    "price": "29,000원~"
+  }
+]

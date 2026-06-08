@@ -1,0 +1,67 @@
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/font" as *;
+@use "../../assets/scss/mixin" as *;
+
+.btn {
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  @include flex(center, center);
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &--sm {
+    height: 40px;
+    padding: 0 16px;
+
+    @extend .text-caption;
+  }
+
+  &--md {
+    height: 52px;
+    padding: 0 24px;
+
+    @extend .text-body;
+  }
+
+  &--lg {
+    height: 60px;
+    padding: 0 32px;
+
+    @extend .text-body-lg;
+  }
+
+  &--primary {
+    background: $primary-blue;
+    color: $surface;
+    border-radius: 12px;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &--secondary {
+    background: $surface;
+    color: $primary-blue;
+    border: 1px solid $primary-blue;
+    border-radius: 12px;
+
+    &:hover {
+      background: $primary-blue-light;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $text-primary;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.04);
+    }
+  }
+}

@@ -1,0 +1,172 @@
+@use "../assets/scss/variables" as *;
+@use "../assets/scss/font" as *;
+@use "../assets/scss/mixin" as *;
+
+#premium {
+  padding: 100px 0;
+  background: $background;
+}
+
+.premium-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.premium-layout {
+  display: grid;
+  gap: 24px;
+
+  @include respond-to(desktop) {
+    grid-template-columns: 1.7fr 1fr;
+    align-items: stretch;
+  }
+}
+
+.premium-visual {
+  position: relative;
+  overflow: hidden;
+  border-radius: 32px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0.3) 60%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  }
+}
+
+.premium-overlay {
+  position: absolute;
+  left: 48px;
+  bottom: 48px;
+  z-index: 2;
+  color: $surface;
+
+  span {
+    display: block;
+    margin-bottom: 12px;
+    @extend .text-caption;
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    line-height: 1.3;
+    @extend .text-display;
+  }
+
+  p {
+    max-width: 420px;
+    @extend .text-body-lg;
+  }
+}
+
+.premium-feature {
+  @include flex(flex-start, stretch, column, 16);
+}
+
+.premium-feature-card {
+  flex: 1;
+  padding: 24px;
+  background: $surface;
+  border: 1px solid $border;
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  @include flex(flex-start, center, row, 20);
+
+  &:hover {
+    transform: translateX(6px);
+    border-color: $primary-blue;
+  }
+}
+
+.premium-feature-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+}
+
+.premium-feature-content {
+  flex: 1;
+
+  h3 {
+    margin-bottom: 6px;
+    color: $text-primary;
+    @extend .text-h3;
+  }
+
+  p {
+    color: $text-secondary;
+    @extend .text-body;
+  }
+}
+
+.premium-feature-number {
+  display: block;
+  margin-bottom: 4px;
+  color: $primary-blue;
+  @extend .text-caption;
+}
+
+@media (max-width: 1023px) {
+  .premium-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .premium-visual {
+    height: 420px;
+  }
+
+  .premium-feature {
+    height: auto;
+  }
+
+  .premium-feature-card {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  #premium {
+    padding: 80px 0;
+  }
+
+  .premium-visual {
+    height: 340px;
+  }
+
+  .premium-overlay {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .premium-feature-card {
+    padding: 20px;
+  }
+
+  .premium-feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

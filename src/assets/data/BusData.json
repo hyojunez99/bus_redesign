@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "departure": "서울경부",
+    "arrival": "부산",
+    "departureTime": "06:00",
+    "arrivalTime": "10:20",
+    "duration": "4시간 20분",
+    "grade": "프리미엄",
+    "price": 45800,
+    "remainSeat": 7
+  },
+  {
+    "id": 2,
+    "departure": "서울경부",
+    "arrival": "부산",
+    "departureTime": "07:00",
+    "arrivalTime": "11:20",
+    "duration": "4시간 20분",
+    "grade": "우등",
+    "price": 36800,
+    "remainSeat": 12
+  },
+  {
+    "id": 3,
+    "departure": "서울경부",
+    "arrival": "부산",
+    "departureTime": "08:00",
+    "arrivalTime": "12:20",
+    "duration": "4시간 20분",
+    "grade": "일반",
+    "price": 26800,
+    "remainSeat": 18
+  },
+  {
+    "id": 4,
+    "departure": "서울경부",
+    "arrival": "부산",
+    "departureTime": "09:30",
+    "arrivalTime": "13:50",
+    "duration": "4시간 20분",
+    "grade": "프리미엄",
+    "price": 45800,
+    "remainSeat": 4
+  },
+  {
+    "id": 5,
+    "departure": "서울경부",
+    "arrival": "부산",
+    "departureTime": "11:00",
+    "arrivalTime": "15:20",
+    "duration": "4시간 20분",
+    "grade": "우등",
+    "price": 36800,
+    "remainSeat": 10
+  },
+  {
+    "id": 6,
+    "departure": "서울경부",
+    "arrival": "부산",
+    "departureTime": "13:00",
+    "arrivalTime": "17:20",
+    "duration": "4시간 20분",
+    "grade": "일반",
+    "price": 26800,
+    "remainSeat": 20
+  },
+  {
+    "id": 7,
+    "departure": "서울경부",
+    "arrival": "대전복합",
+    "departureTime": "07:20",
+    "arrivalTime": "09:00",
+    "duration": "1시간 40분",
+    "grade": "우등",
+    "price": 15200,
+    "remainSeat": 15
+  },
+  {
+    "id": 8,
+    "departure": "서울경부",
+    "arrival": "대전복합",
+    "departureTime": "09:00",
+    "arrivalTime": "10:40",
+    "duration": "1시간 40분",
+    "grade": "일반",
+    "price": 10800,
+    "remainSeat": 22
+  },
+  {
+    "id": 9,
+    "departure": "서울경부",
+    "arrival": "대전복합",
+    "departureTime": "12:00",
+    "arrivalTime": "13:40",
+    "duration": "1시간 40분",
+    "grade": "프리미엄",
+    "price": 19800,
+    "remainSeat": 5
+  },
+  {
+    "id": 10,
+    "departure": "서울경부",
+    "arrival": "광주(유·스퀘어)",
+    "departureTime": "06:40",
+    "arrivalTime": "10:10",
+    "duration": "3시간 30분",
+    "grade": "우등",
+    "price": 31200,
+    "remainSeat": 8
+  },
+  {
+    "id": 11,
+    "departure": "서울경부",
+    "arrival": "광주(유·스퀘어)",
+    "departureTime": "10:00",
+    "arrivalTime": "13:30",
+    "duration": "3시간 30분",
+    "grade": "프리미엄",
+    "price": 39800,
+    "remainSeat": 3
+  },
+  {
+    "id": 12,
+    "departure": "서울경부",
+    "arrival": "광주(유·스퀘어)",
+    "departureTime": "15:00",
+    "arrivalTime": "18:30",
+    "duration": "3시간 30분",
+    "grade": "일반",
+    "price": 22800,
+    "remainSeat": 24
+  },
+  {
+    "id": 13,
+    "departure": "부산",
+    "arrival": "서울경부",
+    "departureTime": "07:00",
+    "arrivalTime": "11:20",
+    "duration": "4시간 20분",
+    "grade": "프리미엄",
+    "price": 45800,
+    "remainSeat": 6
+  },
+  {
+    "id": 14,
+    "departure": "부산",
+    "arrival": "서울경부",
+    "departureTime": "09:00",
+    "arrivalTime": "13:20",
+    "duration": "4시간 20분",
+    "grade": "우등",
+    "price": 36800,
+    "remainSeat": 14
+  },
+  {
+    "id": 15,
+    "departure": "부산",
+    "arrival": "서울경부",
+    "departureTime": "12:00",
+    "arrivalTime": "16:20",
+    "duration": "4시간 20분",
+    "grade": "일반",
+    "price": 26800,
+    "remainSeat": 19
+  },
+  {
+    "id": 16,
+    "departure": "대전복합",
+    "arrival": "서울경부",
+    "departureTime": "08:00",
+    "arrivalTime": "09:40",
+    "duration": "1시간 40분",
+    "grade": "우등",
+    "price": 15200,
+    "remainSeat": 16
+  },
+  {
+    "id": 17,
+    "departure": "대전복합",
+    "arrival": "서울경부",
+    "departureTime": "11:00",
+    "arrivalTime": "12:40",
+    "duration": "1시간 40분",
+    "grade": "프리미엄",
+    "price": 19800,
+    "remainSeat": 7
+  },
+  {
+    "id": 18,
+    "departure": "광주(유·스퀘어)",
+    "arrival": "서울경부",
+    "departureTime": "08:30",
+    "arrivalTime": "12:00",
+    "duration": "3시간 30분",
+    "grade": "우등",
+    "price": 31200,
+    "remainSeat": 11
+  },
+  {
+    "id": 19,
+    "departure": "광주(유·스퀘어)",
+    "arrival": "서울경부",
+    "departureTime": "13:00",
+    "arrivalTime": "16:30",
+    "duration": "3시간 30분",
+    "grade": "프리미엄",
+    "price": 39800,
+    "remainSeat": 2
+  },
+  {
+    "id": 20,
+    "departure": "광주(유·스퀘어)",
+    "arrival": "서울경부",
+    "departureTime": "17:00",
+    "arrivalTime": "20:30",
+    "duration": "3시간 30분",
+    "grade": "일반",
+    "price": 22800,
+    "remainSeat": 21
+  }
+]

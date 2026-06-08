@@ -1,0 +1,155 @@
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/font" as *;
+@use "../../assets/scss/mixin" as *;
+
+#footer {
+  padding: 60px 0;
+  background: #f3f4f6;
+  border-top: 1px solid $border;
+}
+
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-top {
+  display: grid;
+  gap: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid $border;
+
+  @include respond-to(desktop) {
+    grid-template-columns: 280px 1fr;
+  }
+}
+
+.footer-brand {
+  h2 {
+    margin-bottom: 8px;
+    color: $primary-blue;
+
+    @extend .text-h2;
+  }
+
+  span {
+    display: block;
+    margin-bottom: 24px;
+
+    color: $primary-blue;
+
+    @extend .text-caption;
+  }
+
+  p {
+    color: $text-secondary;
+    line-height: 1.8;
+
+    @extend .text-body;
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  li {
+    cursor: pointer;
+    color: $text-primary;
+
+    @extend .text-body;
+  }
+}
+
+.footer-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  p {
+    color: $text-secondary;
+
+    @extend .text-body;
+  }
+}
+
+.copyright {
+  color: $text-caption;
+
+  @extend .text-small;
+}
+
+.footer-bottom {
+  padding-top: 32px;
+
+  @include flex(space-between, center, row, 24);
+
+  flex-wrap: wrap;
+}
+
+.footer-company {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  img {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.7;
+  }
+}
+
+.footer-cert {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer {
+    padding: 48px 0;
+  }
+
+  .footer-menu {
+    gap: 16px;
+  }
+
+  .footer-detail {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .footer-company {
+    gap: 16px;
+
+    img {
+      height: 22px;
+    }
+  }
+
+  .footer-cert {
+    img {
+      height: 40px;
+    }
+  }
+}

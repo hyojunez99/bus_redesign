@@ -1,0 +1,58 @@
+@use "../../assets/scss/variables" as *;
+@use "../../assets/scss/font" as *;
+@use "../../assets/scss/mixin" as *;
+
+.chip {
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  white-space: nowrap;
+
+  @include flex(center, center);
+
+  @extend .text-caption;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  &--default {
+    background: $surface;
+    border: 1px solid $border;
+    color: $text-primary;
+
+    &:hover {
+      border-color: $primary-blue;
+      color: $primary-blue;
+    }
+  }
+
+  &--primary {
+    background: $primary-blue;
+    color: $surface;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &--recent {
+    background: $primary-blue-light;
+    color: $primary-blue;
+  }
+
+  &--favorite {
+    background: $primary-yellow;
+    color: #b7791f;
+  }
+
+  &--success {
+    background: rgba(22, 163, 74, 0.1);
+    color: $color-success;
+  }
+
+  &--error {
+    background: rgba(220, 38, 38, 0.1);
+    color: $color-error;
+  }
+}

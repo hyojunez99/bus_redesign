@@ -1,0 +1,93 @@
+@use "../../assets/scss/variables" as *;
+
+.seat-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 3000;
+}
+
+.seat-modal {
+  width: 100%;
+  max-width: 700px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 32px;
+}
+
+.seat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+
+  button {
+    background: none;
+    cursor: pointer;
+    font-size: 24px;
+  }
+}
+
+.bus-info-box {
+  margin-bottom: 32px;
+}
+
+.seat-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 32px;
+}
+
+.seat {
+  height: 56px;
+
+  border-radius: 12px;
+
+  border: 1px solid #ddd;
+
+  cursor: pointer;
+
+  background: white;
+
+  &.selected {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+  }
+}
+
+.confirm-btn {
+  width: 100%;
+  height: 56px;
+
+  border-radius: 12px;
+
+  background: #2563eb;
+  color: white;
+
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .seat-modal {
+    width: calc(100% - 32px);
+    padding: 20px;
+  }
+
+  .seat-layout {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
